@@ -1,0 +1,19 @@
+<div class="container" style="margin: auto;">
+
+  <div class="row justify-content-center">
+
+    <div class="card rd-card" style="width: 18rem;" *ngFor="let group of groups | async">
+      <img class="card-img-top" style="width: 286px; height: 180px; object-fit: contain" 
+        src="{{ group.courseRef ? group.courseRef.img : ''  }}"
+        alt="{{ group.payload.doc.data() }}">
+      <hr>
+      <div class="card-body">
+        <h5 class="card-title">{{ group.payload.doc.id }}</h5>
+        <p class="card-text">{{ group.courseRef ? group.courseRef.name : '' }} </p>
+        <p class="card-text">Start Date: {{ group.payload.doc.data().startDate.toDate() |  date: 'yyyy-MM-dd' }}</p>
+        <p class="card-text">End Date: {{ group.payload.doc.data().endDate.toDate()  |  date: 'yyyy-MM-dd' }}</p>
+        <a href="#" class="card-link">Apply</a>
+      </div>
+    </div>
+  </div>
+</div>

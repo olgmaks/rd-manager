@@ -1,0 +1,18 @@
+<div class="container" style="margin: auto;"> 
+  
+  <div class="row justify-content-center">
+
+    <div class="card rd-card" style="width: 18rem;" *ngFor="let course of courses | async">
+      <img class="card-img-top" style="width: 286px; height: 180px; object-fit: contain" 
+        src="{{ course.payload.doc.data().img }}"
+        alt="{{ course.payload.doc.data().name }}">
+      <hr>
+      <div class="card-body">
+        <h5 class="card-title">{{ course.payload.doc.id }}</h5>
+        <p class="card-text">{{ course.payload.doc.data().name }} </p>
+        <a href="#" class="card-link">Apply</a>
+      </div>
+    </div> 
+  </div>
+</div>
+
