@@ -13,7 +13,7 @@ import { GroupsService } from '../services/groups-service';
 })
 export class GroupsComponent implements OnInit {
 
-  groups: Observable<any>;
+  groups: Observable<GroupModel[]>;
 
   constructor(
     private groupsService: GroupsService) {

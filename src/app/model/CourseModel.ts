@@ -1,5 +1,8 @@
-export interface CourseModel {
-    id?: string;
-    img: string;
-    name: string;
+export interface CourseModel
+{
+  id?: string;
+  code?: string;
+  img: string;
+  name: string;
+  groupNamePrefix?: string;
 }

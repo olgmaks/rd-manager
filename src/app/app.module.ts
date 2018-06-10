@@ -22,6 +22,7 @@ import { StudentsComponent } from './students/students.component';
 import { NewGroupPopupComponent } from './groups/new-group-popup/new-group-popup.component';
 import { CoursesService } from './services/courses-service';
 import { GroupsService } from './services/groups-service';
+import {Angular2FontawesomeModule} from "angular2-fontawesome";
 
 const appRoutes: Routes = [
   { path: 'groups', component: GroupsComponent },
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
     NgbModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    Angular2FontawesomeModule
   ],
   providers: [
     CoursesService,
